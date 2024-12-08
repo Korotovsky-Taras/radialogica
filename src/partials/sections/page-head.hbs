@@ -1,0 +1,12 @@
+<section class="app-page-head">
+    <div class="app-container --sm">
+        {{#if h1}}
+            <h1>{{h1}}</h1>
+        {{/if}}
+        {{#if @partial-block}}
+            <div class="app-page-head__subtitle">
+                {{> @partial-block}}
+            </div>
+        {{/if}}
+    </div>
+</section>

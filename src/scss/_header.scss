@@ -1,0 +1,102 @@
+@use "base/mixin";
+@use "base/variables";
+
+.app-header {
+    background-color: var(--color-g0);
+    border-bottom: 1px solid #A9A9A9;
+    position: sticky;
+    z-index: var(--h-index);
+    top: 0;
+}
+
+.app-header__logo {
+    width: variables.toRem(178px);
+    height: variables.toRem(100px);
+    display: flex;
+    svg {
+        max-width: 100%;
+    }
+}
+
+.app-header__wrapper {
+    height: var(--header-height);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.app-header__left,
+.app-header__right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.app-header__left {
+    margin-right: auto;
+    height: 100%;
+    position: relative;
+
+    .app-header__logo {
+        position: absolute;
+        left: 0;
+        top: 100%;
+        transform: translateY(calc(-50%* 1.15));
+    }
+}
+
+.app-header__right {
+    margin-left: auto;
+}
+
+.app-hamburger-btn {
+    --btn-size: #{variables.toRem(56px)};
+    --btn-color: var(--color-g9);
+    margin-left: variables.toRem(36px);
+    position: relative;
+    z-index: 1;
+}
+
+.app-hamburger__icon {
+    --width: #{variables.toRem(56px)};
+    --height: #{variables.toRem(5px)};
+    --indent: #{variables.toRem(7px)};
+
+
+    width: 0;
+    height: 0;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    span {
+        display: block;
+        width: var(--width);
+        border-top: var(--height) solid;
+        position: absolute;
+        transform-origin: center;
+
+        transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+        background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+        opacity 0.55s ease;
+
+        &:nth-child(1) {
+            transform: translateY(calc(var(--height) * -1));
+        }
+        &:nth-child(2) {
+            transform: translateY(var(--indent));
+        }
+    }
+
+    .app-hamburger-btn.active & span {
+        opacity: 1;
+        transform: rotate(45deg);
+        border-top-color: white;
+
+        &:nth-child(2) {
+            transform: rotate(-45deg);
+        }
+    }
+}

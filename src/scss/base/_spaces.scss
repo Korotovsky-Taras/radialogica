@@ -1,0 +1,19 @@
+@use "sass:string";
+@use "sass:list";
+@use "variables";
+
+$space-count: 20;
+$space-step: 4;
+$sides: (top, bottom, left, right);
+
+@for $i from 1 through $space-count {
+    $value: $space-step * $i;
+    @each $side in $sides {
+        .m#{string.slice($side, 0, 1)}-#{$i} {
+            margin-#{$side}: #{variables.toRem($value)}!important;
+        }
+        .p#{string.slice($side, 0, 1)}-#{$i} {
+            padding-#{$side}: #{variables.toRem($value)}!important;
+        }
+    }
+}

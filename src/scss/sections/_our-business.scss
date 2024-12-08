@@ -1,0 +1,157 @@
+@use "../base/mixin";
+@use "../base/variables";
+
+.app-our-business {
+    position: relative;
+    padding-top: variables.toRem(68px);
+    padding-bottom: variables.toRem(100px);
+    border-top: 1px solid var(--color-g3);
+    background-image: linear-gradient(180deg, var(--color-g0), transparent);
+    background-size: 100% 260px;
+    background-repeat: no-repeat;
+
+}
+
+.app-our-business__card {
+
+}
+
+.app-our-business__card-description {
+    font-size: variables.toRem(18px);
+    p + p {
+        margin-top: variables.toRem(4px);
+    }
+
+    &.--grid {
+        display: grid;
+        row-gap: variables.toRem(30px);
+        column-gap: variables.toRem(60px);
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.app-our-business__card-info {
+    background-color: var(--color-g1);
+
+    &.--v1 {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        align-items: center;
+        column-gap: variables.toRem(58px);
+        row-gap: variables.toRem(48px);
+        padding: variables.toRem(36px) variables.toRem(50px);
+    }
+
+    &.--v2 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        gap: variables.toRem(30px);
+        padding: variables.toRem(20px) variables.toRem(50px);
+    }
+
+    .--circle-info {
+        width: variables.toRem(184px);
+        font-family: 'GCF-bold', sans-serif;
+        font-size: variables.toRem(46px);
+        padding-top: variables.toRem(10px);
+        background-color: var(--color-g9);
+        box-shadow: 0 0 0 variables.toRem(6px);
+        color: white;
+        border-radius: 100%;
+        display: grid;
+        align-items: center;
+        text-align: center;
+        aspect-ratio: 1;
+        box-sizing: border-box;
+    }
+
+    .--content {
+        font-weight: 100;
+        line-height: 1.47;
+        font-size: variables.toRem(24px);
+        color: black;
+
+        mark {
+            font-weight: 500;
+        }
+    }
+
+    .--stat-info {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        column-gap: variables.toRem(14px);
+
+        &.--inline {
+            flex-direction: row;
+        }
+    }
+
+    .--stat-info-value {
+        font-family: 'GCF-bold', sans-serif;
+        font-size: variables.toRem(58px);
+        line-height: 1;
+    }
+
+    .--stat-info-name {
+        font-family: 'GCF-demi-bold', sans-serif;
+        font-size: variables.toRem(30px);
+    }
+}
+
+.app-our-business__card-footer {
+    text-align: right;
+}
+
+.app-our-business__card-title {
+    border-bottom: 1px solid var(--color-orange-v1);
+    padding-bottom: variables.toRem(6px);
+
+    span {
+        box-sizing: border-box;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        vertical-align: middle;
+        font-family: 'GCF-extra-bold', sans-serif;
+        background-color: var(--color-orange-v1);
+        text-transform: uppercase;
+        color: white;
+        letter-spacing: 0.3px;
+        padding-top: variables.toRem(4px);
+        font-size: variables.toRem(25px);
+        height: variables.toRem(54px);
+        padding-left: variables.toRem(32px);
+        padding-right: variables.toRem(44px);
+        box-shadow: inset 8px 0 0 var(--color-dark-red);
+    }
+}
+
+
+@include mixin.mq-max(md) {
+}
+
+
+@include mixin.mq-max(sm) {
+    .app-our-business__card-info {
+        &.--v1 {
+            padding: variables.toRem(60px) variables.toRem(50px);
+            grid-template-columns: 1fr;
+        }
+        &.--v2 {
+            padding: variables.toRem(20px) variables.toRem(30px);
+        }
+        .--circle-info {
+            margin: auto;
+        }
+    }
+    .app-our-business__card-description {
+        &.--grid {
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+    }
+}

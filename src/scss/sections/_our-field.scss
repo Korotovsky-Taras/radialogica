@@ -1,0 +1,43 @@
+@use "../base/mixin";
+@use "../base/variables";
+
+.app-our-field {
+    position: relative;
+    padding-top: variables.toRem(20px);
+    padding-bottom: variables.toRem(76px);
+
+    .app-container {
+        position: relative;
+    }
+}
+
+
+.app-our-field__grid {
+    display: grid;
+    row-gap: 28px;
+    column-gap: 24px;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+
+.app-our-field__card {
+    padding: variables.toRem(36px);
+    font-size: variables.toRem(18px);
+    background-color: var(--color-orange-v4);
+    line-height: 1.5;
+}
+
+
+@include mixin.mq-max(md) {
+    .app-our-field__grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+
+@include mixin.mq-max(sm) {
+    .app-our-field__grid {
+        grid-template-columns: 1fr;
+    }
+}

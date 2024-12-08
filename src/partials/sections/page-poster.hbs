@@ -1,0 +1,18 @@
+<section class="app-page-poster">
+    {{#if src}}
+        <div class="app-page-poster__img">
+            <img src="{{src}}" title="poster"/>
+        </div>
+    {{/if}}
+    <div class="app-container --sm">
+        {{#if h2}}
+            <h2 class="app-section-title">{{h2}}</h2>
+        {{/if}}
+        {{#if @partial-block}}
+            <div class="app-section-subtitle">
+                {{> @partial-block}}
+            </div>
+        {{/if}}
+    </div>
+    <div class="app-page-poster__bottom"></div>
+</section>

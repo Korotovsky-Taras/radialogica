@@ -1,0 +1,64 @@
+@font-face {
+    font-family: 'GCF-demi-bold';
+    src: local('Greycliff CF Demi Bold'), local('Greycliff-CF-Demi-Bold'),
+    url('/fonts/GreycliffCF-DemiBold.woff2') format('woff2'),
+    url('/fonts/GreycliffCF-DemiBold.woff') format('woff'),
+    url('/fonts/GreycliffCF-DemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GCF-bold';
+    src: local('Greycliff CF Bold'), local('Greycliff-CF-Bold'),
+    url('/fonts/GreycliffCF-Bold.woff2') format('woff2'),
+    url('/fonts/GreycliffCF-Bold.woff') format('woff'),
+    url('/fonts/GreycliffCF-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GCF-extra-bold';
+    src: local('Greycliff CF Extra Bold'), local('Greycliff-CF-Extra-Bold'),
+    url('/fonts/GreycliffCF-ExtraBold.woff2') format('woff2'),
+    url('/fonts/GreycliffCF-ExtraBold.woff') format('woff'),
+    url('/fonts/GreycliffCF-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+.font-g--demi-bold {
+    font-family: 'GCF-demi-bold', sans-serif;
+    font-weight: 600;
+}
+
+.font-g--bold {
+    font-family: 'GCF-bold', sans-serif;
+    font-weight: 700;
+}
+
+.font-g--extra-bold {
+    font-family: 'GCF-extra-bold', sans-serif;
+    font-weight: 800;
+}
+
+.font-r--extra-bold {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+}
+
+.font-r--bold {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+}
+
+.font-r--medium {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+
+.font-text {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}

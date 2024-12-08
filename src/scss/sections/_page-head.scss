@@ -1,0 +1,21 @@
+@use "../base/variables";
+
+.app-page-head {
+    text-align: center;
+    padding-top: variables.toRem(116px);
+    padding-bottom: variables.toRem(128px);
+
+    h1 {
+        margin-bottom: variables.toRem(44px);
+    }
+}
+
+.app-page-head__subtitle {
+    font-size: variables.toRem(26px);
+    letter-spacing: 0.2px;
+    line-height: 1.5;
+
+    mark {
+        font-weight: 500;
+    }
+}

@@ -1,0 +1,52 @@
+@use "../base/variables";
+
+.app-page-poster {
+    position: relative;
+    border-top: 8px solid var(--color-orange-v1);
+    background-color: var(--color-g9);
+    color: white;
+    text-align: center;
+    padding-top: variables.toRem(116px);
+    padding-bottom: variables.toRem(188px);
+
+    .app-container {
+        position: relative;
+    }
+}
+
+.app-page-poster__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+
+    img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+}
+
+.app-page-poster__bottom {
+    position: absolute;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    bottom: 0;
+    height: 5vw;
+
+    &:before {
+        content: "";
+        left: -10vw;
+        bottom: -7.7vw;
+        height: 10vw;
+        width: 120vw;
+        position: absolute;
+        background-color: white;
+        border-radius: 100%;
+    }
+}

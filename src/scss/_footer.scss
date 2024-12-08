@@ -1,0 +1,97 @@
+@use "base/mixin";
+@use "base/variables";
+
+.app-footer {
+    color: white;
+    margin-top: auto;
+    background-color: var(--color-g9);
+    border-top: variables.toRem(22px) solid var(--color-orange-v1);
+
+    a {
+        &:hover {
+            opacity: 0.8;
+            transition: opacity 0.2s ease-out;
+        }
+    }
+
+    @include mixin.mq-max(md) {
+
+    }
+}
+
+.app-footer-info {
+    list-style-type: none;
+    font-size: variables.toRem(18px);
+    padding: 0;
+    margin: 0;
+
+    li ~ li {
+        margin-top: variables.toRem(14px);
+    }
+}
+
+.app-footer__body {
+    color: white;
+    padding-top: variables.toRem(46px);
+    padding-bottom: variables.toRem(52px);
+}
+
+.app-footer__basement {
+    background-color: black;
+    color: #a3a3a3;
+    line-height: 1.5;
+    font-size: variables.toRem(16px);
+    padding-top: variables.toRem(12px);
+    padding-bottom: variables.toRem(12px);
+}
+
+
+.app-footer__social {
+    [href] {
+        ~ [href] {
+            margin-left: variables.toRem(22px);
+        }
+    }
+}
+
+.app-footer-heading {
+    font-size: variables.toRem(24px);
+    padding-bottom: variables.toRem(8px);
+    margin-bottom: variables.toRem(34px);
+    border-bottom: 2px solid;
+}
+
+.app-footer-grid {
+    --col-width: 254px;
+
+    display: grid;
+    grid-template-columns: var(--col-width) var(--col-width) var(--col-width);
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+
+@include mixin.mq-max(md) {
+    .app-footer__body {
+        padding-top: variables.toRem(66px);
+        padding-bottom: variables.toRem(68px);
+    }
+    .app-footer-grid {
+        grid-template-columns: var(--col-width) var(--col-width);
+        justify-content: center;
+        gap: variables.toRem(48px);
+    }
+}
+
+
+@include mixin.mq-max(sm) {
+    .app-footer__body {
+        padding-top: variables.toRem(66px);
+        padding-bottom: variables.toRem(68px);
+    }
+    .app-footer-grid {
+        grid-template-columns: var(--col-width);
+        justify-content: center;
+        gap: variables.toRem(48px);
+    }
+}

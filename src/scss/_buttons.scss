@@ -1,0 +1,91 @@
+.app-btn {
+    --btn-fs: 22px;
+    --btn-size: 56px;
+    --btn-weight: 600;
+    --btn-indent: 24px;
+    --btn-text-spacing: 0.3px;
+    --btn-line-width: 8px;
+
+    --btn-color: transparent;
+    --btn-background: transparent;
+
+    --btn-hover-color: var(--btn-color);
+    --btn-hover-background: var(--btn-background);
+
+    --btn-active-color: var(--btn-hover-color);
+    --btn-active-background: var(--btn-hover-background);
+
+    --btn-disabled-color: var(--btn-color);
+    --btn-disabled-background: var(--btn-background);
+
+    border: none;
+    background: var(--btn-background);
+    color: var(--btn-color);
+    box-sizing: border-box;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    text-decoration: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: var(--btn-fs);
+    font-weight: var(--btn-weight);
+    letter-spacing: var(--btn-text-spacing);
+    min-width: var(--btn-size);
+    min-height: var(--btn-size);
+    padding: 0 var(--btn-indent) 0 calc(var(--btn-line-width) + var(--btn-indent));
+    white-space: nowrap;
+    font-family: 'GCF-demi-bold', sans-serif;
+    padding-top: calc(var(--btn-size) * 0.09);
+    position: relative;
+    z-index: 1;
+
+    &:before {
+        content:"";
+        transition-property: right, background-color;
+        transition-duration: 0.15s ;
+        transition-timing-function: ease-out;
+        background-color: var(--btn-hover-background);
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: calc(100% - var(--btn-line-width));
+        bottom: 0;
+        z-index: -1;
+    }
+
+    @media (hover: hover) {
+        &:hover {
+            transition-property: color, background-color;
+            transition-duration: 0.15s ;
+            transition-timing-function: ease-out;
+            color: var(--btn-hover-color);
+            background: var(--btn-hover-background);
+
+            &:before {
+                right: 0;
+            }
+        }
+    }
+
+    &:active {
+        transition-property: color, background-color;
+        transition-duration: 0.15s;
+        transition-timing-function: ease-out;
+        color: var(--btn-active-color);
+        background: var(--btn-active-background);
+
+        &:before {
+            background: var(--btn-active-background);
+        }
+    }
+}
+
+
+.app-section-btn {
+    --btn-color: white;
+    --btn-background: var(--color-g6);
+    --btn-hover-background: var(--color-orange-v1);
+    --btn-active-background: var(--color-orange-v2);
+}
