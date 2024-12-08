@@ -1,0 +1,14 @@
+@use "../base/mixin";
+@use "../base/variables";
+
+.app-contact-map {
+    #map {
+        height: variables.toRem(640px);
+
+        @include mixin.mq-max(sm) {
+            height: 50vh;
+            height: 50dvh;
+        }
+    }
+}
+

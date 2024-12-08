@@ -33,23 +33,17 @@
     }
 
     @include mixin.mq-max(lg) {
-        --ratio: 0.8
+        --ratio: 0.85
     }
 
     @include mixin.mq-max(md) {
     }
 
     @include mixin.mq-max(sm) {
-        --ratio: 0.7
+        --ratio: 0.75
     }
 }
 
-input:-webkit-autofill,
-input:-webkit-autofill:hover,
-input:-webkit-autofill:focus,
-input:-webkit-autofill:active{
-    -webkit-box-shadow: 0 0 0 30px white inset !important;
-}
 
 mark {
     background-color: transparent;

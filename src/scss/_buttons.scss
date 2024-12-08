@@ -1,10 +1,12 @@
+@use "base/variables";
+
 .app-btn {
-    --btn-fs: 22px;
-    --btn-size: 56px;
+    --btn-fs: #{variables.toRem(22px)};
+    --btn-size: #{variables.toRem(56px)};
     --btn-weight: 600;
-    --btn-indent: 24px;
+    --btn-indent: #{variables.toRem(24px)};
     --btn-text-spacing: 0.3px;
-    --btn-line-width: 8px;
+    --btn-line-width: #{variables.toRem(8px)};
 
     --btn-color: transparent;
     --btn-background: transparent;
@@ -88,4 +90,13 @@
     --btn-background: var(--color-g6);
     --btn-hover-background: var(--color-orange-v1);
     --btn-active-background: var(--color-orange-v2);
+}
+
+.app-back-btn {
+    --btn-size:  #{variables.toRem(70px)};
+    --btn-color: white;
+    --btn-background: var(--color-g6);
+    --btn-hover-background: var(--color-orange-v1);
+    --btn-active-background: var(--color-orange-v2);
+    min-width: variables.toRem(200px);
 }

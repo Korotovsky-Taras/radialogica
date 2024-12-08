@@ -44,8 +44,9 @@
     text-align: right;
 
     .--btn {
+        height: 50px;
+        font-size: 16px;
         display: inline-flex;
-        height: variables.toRem(50px);
         align-items: center;
         padding: 0 variables.toRem(24px);
         text-transform: uppercase;
@@ -72,6 +73,23 @@
                 background: var(--color-g9);
             }
         }
+    }
+}
+
+.app-news-card__headline {
+    background-color: var(--color-g4);
+    padding: variables.toRem(26px) variables.toRem(42px);
+    font-size: variables.toRem(18px);
+    font-weight: 500;
+    color: white;
+}
+
+.app-news-card__content {
+    padding: variables.toRem(50px) variables.toRem(42px);
+    font-size: variables.toRem(18px);
+
+    p:not(:first-child) {
+        margin-top: variables.toRem(26px);
     }
 }
 

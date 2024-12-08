@@ -2,7 +2,7 @@
   "name": "radiologica",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://korotovsky-taras.github.io/radiologica",
+  "homepage": "https://korotovsky-taras.github.io/radialogica/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

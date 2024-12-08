@@ -1,0 +1,65 @@
+@use "../base/mixin";
+@use "../base/variables";
+
+.app-contact-form {
+    color: white;
+    background-color: var(--color-g10);
+    border-top: variables.toRem(8px) solid var(--color-orange-v1);
+    padding-top: variables.toRem(110px);
+    padding-bottom: variables.toRem(116px);
+}
+
+
+.app-contact-form__grid {
+    display: grid;
+    padding: variables.toRem(50px) variables.toRem(88px);
+    grid-template-columns: 0.82fr 1fr;
+    column-gap: variables.toRem(52px);
+    row-gap: variables.toRem(42px);
+    background-color: var(--color-g9);
+
+    textarea {
+        grid-row: 1 / 4;
+        min-height: 150px;
+        grid-column: 2;
+    }
+
+    submit {
+        grid-row: 4;
+        grid-column: 2;
+        margin-left: auto;
+        min-width: 200px;
+    }
+}
+
+
+@include mixin.mq-max(md) {
+    .app-contact-form__grid {
+        padding: variables.toRem(50px);
+    }
+}
+
+
+@include mixin.mq-max(sm) {
+    .app-contact-form {
+        padding-top: variables.toRem(46px);
+        padding-bottom: variables.toRem(62px);
+    }
+
+    .app-contact-form__grid {
+        grid-template-columns: 1fr;
+
+        textarea {
+            grid-row: unset;
+            min-height: 150px;
+            grid-column: 1;
+        }
+
+        submit {
+            grid-row: unset;
+            grid-column: 1;
+            margin-left: auto;
+            min-width: 200px;
+        }
+    }
+}
