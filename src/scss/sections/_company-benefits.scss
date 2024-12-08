@@ -1,0 +1,45 @@
+@use "../base/variables";
+@use "../base/mixin";
+
+.app-company-benefits {
+    padding-bottom: variables.toRem(126px);
+}
+
+.app-company-benefits__grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-column-gap: variables.toRem(32px);
+    grid-row-gap: variables.toRem(42px);
+}
+
+.app-company-benefits__card {
+    .--head {
+        color: white;
+        height: variables.toRem(58px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: variables.toRem(30px);
+        background-color: var(--color-orange-v1);
+        border-top: 6px solid var(--color-dark-red);
+        font-family: 'GCF-demi-bold', sans-serif;
+        margin-bottom: variables.toRem(16px);
+    }
+    .--content {
+        text-align: center;
+        font-size: variables.toRem(24px);
+        line-height: 1.45;
+    }
+}
+
+
+
+@include mixin.mq-max(md) {
+}
+
+
+@include mixin.mq-max(sm) {
+    .app-company-benefits {
+        padding-bottom: variables.toRem(72px);
+    }
+}

@@ -16,7 +16,7 @@
     display: grid;
     row-gap: 28px;
     column-gap: 24px;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3,1fr);
 }
 
 
@@ -30,7 +30,7 @@
 
 @include mixin.mq-max(md) {
     .app-our-field__grid {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(2,1fr);
     }
 
 }

@@ -12,7 +12,7 @@
 
 .app-news-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3,1fr);
     row-gap: variables.toRem(60px);
     column-gap: variables.toRem(22px);
 }
@@ -131,7 +131,7 @@
 
 @include mixin.mq-max(md) {
     .app-news-grid {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(2,1fr);
     }
 }
 

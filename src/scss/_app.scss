@@ -172,6 +172,9 @@ html.ovhidden body {
     mark {
         font-weight: 500;
     }
+    p:not(:first-child) {
+        margin-top: variables.toRem(40px);
+    }
 }
 
 .app-container {

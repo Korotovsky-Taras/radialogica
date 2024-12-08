@@ -13,16 +13,3 @@
         padding-bottom: variables.toRem(128px);
     }
 }
-
-.app-page-head__subtitle {
-    font-size: variables.toRem(26px);
-    letter-spacing: 0.2px;
-    line-height: 1.5;
-
-    mark {
-        font-weight: 500;
-    }
-    p:not(:first-child) {
-        margin-top: variables.toRem(40px);
-    }
-}

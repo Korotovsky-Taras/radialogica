@@ -1,0 +1,74 @@
+@use "../base/variables";
+@use "../base/mixin";
+
+.app-company-leadership {
+    padding-top: variables.toRem(32px);
+    padding-bottom: variables.toRem(62px);
+}
+
+
+.app-company-leader {
+    display: grid;
+    grid-template-columns: minmax(variables.toRem(240px), variables.toRem(320px)) 1fr;
+    grid-row-gap: variables.toRem(46px);
+    grid-column-gap: variables.toRem(64px);
+    align-items: center;
+    margin-bottom: variables.toRem(86px);
+
+    .--image {
+        grid-column: 1;
+        grid-row: 1/-2;
+        aspect-ratio: 1;
+        background-color: var(--color-g4);
+
+        img {
+            display: block;
+        }
+    }
+
+    .--person-name {
+        font-size: variables.toRem(22px);
+        font-weight: 500;
+    }
+
+    .--person-position {
+        font-style: italic;
+        font-size: variables.toRem(22px);
+        color: var(--color-orange-v1);
+    }
+
+    .--header {
+        grid-column: 2;
+        border-bottom: 1px solid var(--color-g1);
+        margin-bottom: variables.toRem(24px);
+        padding-bottom: variables.toRem(24px);
+    }
+
+    .--content {
+        grid-column: 2;
+        font-size: 18px;
+        line-height: 1.45;
+        letter-spacing: 0.13px;
+    }
+}
+
+
+@include mixin.mq-max(md) {
+    .app-company-leader {
+        grid-template-columns: 1fr;
+
+        .--image {
+            width: 320px;
+            max-width: 100%;
+            grid-column: 1;
+            grid-row: unset;
+        }
+    }
+}
+
+
+@include mixin.mq-max(sm) {
+    .app-company-benefits {
+        padding-bottom: variables.toRem(72px);
+    }
+}
