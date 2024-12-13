@@ -1,0 +1,56 @@
+@use "../base/mixin";
+@use "../base/variables";
+
+.app-our-services {
+    padding-top: variables.toRem(68px);
+    padding-bottom: variables.toRem(68px);
+
+    .--item {
+        flex: 1;
+        min-width: 0;
+        padding: variables.toRem(6px);
+        box-sizing: border-box;
+        box-shadow: 0 0 0 1px var(--color-g9);
+        background: white;
+        display: flex;
+        align-items: center;
+    }
+    .--item-title {
+        background-color: var(--color-orange-v1);
+        display: flex;
+        align-items: center;
+        height: variables.toRem(70px);
+        font-size: variables.toRem(24px);
+        padding-left: variables.toRem(28px);
+        padding-right: variables.toRem(24px);
+        box-sizing: border-box;
+        min-width: variables.toRem(348px);
+        min-height: 60px;
+        flex: 1;
+        color: white;
+    }
+    .--item-content {
+        padding-left: variables.toRem(28px);
+        padding-right: variables.toRem(24px);
+        font-size: variables.toRem(18px);
+        line-height: 1.3;
+    }
+}
+
+
+@include mixin.mq-max(md) {
+    .app-our-services {
+        .--item {
+            flex-direction: column;
+            align-items: unset;
+        }
+        .--item-content {
+            padding-top: variables.toRem(28px);
+            padding-bottom: variables.toRem(28px);
+        }
+    }
+}
+
+
+@include mixin.mq-max(sm) {
+}

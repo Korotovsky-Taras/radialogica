@@ -50,6 +50,10 @@ mark {
     color: var(--color-orange-v1);
 }
 
+.cl-orange {
+    color: var(--color-orange-v1);
+}
+
 h1,h2,h3 {
     margin: 0;
     text-transform: none;
@@ -173,7 +177,7 @@ html.ovhidden body {
         font-weight: 500;
     }
     p:not(:first-child) {
-        margin-top: variables.toRem(40px);
+        margin-top: variables.toRem(30px);
     }
 }
 

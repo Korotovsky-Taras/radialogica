@@ -1,0 +1,68 @@
+@use "../base/mixin";
+@use "../base/variables";
+
+.app-our-platform {
+    padding-top: variables.toRem(48px);
+    padding-bottom: variables.toRem(108px);
+
+    .--grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .--item {
+        padding: variables.toRem(6px);
+        box-sizing: border-box;
+        box-shadow: 0 0 0 1px var(--color-g9);
+        background: white;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .--item-icon {
+        padding-top: variables.toRem(16px);
+        svg {
+            height: 80px;
+        }
+    }
+    .--item-title {
+        flex: 1;
+        color: var(--color-orange-v1);
+        font-size: variables.toRem(24px);
+        font-weight: 500;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        min-height: variables.toRem(70px);
+        padding-top: variables.toRem(16px);
+        padding-bottom: variables.toRem(16px);
+        box-sizing: border-box;
+    }
+    .--item-subtitle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+        min-height: variables.toRem(80px);
+        background-color: var(--color-g0);
+        font-size: variables.toRem(18px);
+        padding: variables.toRem(16px);
+    }
+}
+
+
+@include mixin.mq-max(md) {
+    .app-our-platform {
+        .--grid {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+}
+
+
+@include mixin.mq-max(sm) {
+    .app-our-platform {
+        .--grid {
+            grid-template-columns: 1fr;
+        }
+    }
+}
