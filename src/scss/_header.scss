@@ -10,11 +10,11 @@
 }
 
 .app-header__logo {
-    width: variables.toRem(178px);
-    height: variables.toRem(100px);
     display: flex;
+
     svg {
-        max-width: 100%;
+        width: variables.toRem(178px);
+        height: variables.toRem(100px);
     }
 }
 
