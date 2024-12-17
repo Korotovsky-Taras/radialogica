@@ -91,5 +91,18 @@
 
 
 @include mixin.mq-max(sm) {
+    .app-our-software__products {
+        padding-top: 0;
+        padding-bottom: 0;
 
+        .app-container {
+            padding-left: 0;
+            padding-right: 0;
+        }
+        .--card {
+            + .--card {
+                margin-top: variables.toRem(10px);
+            }
+        }
+    }
 }
