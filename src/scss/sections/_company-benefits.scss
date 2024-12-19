@@ -35,10 +35,16 @@
 
 
 @include mixin.mq-max(md) {
+    .app-company-benefits__grid {
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 
 @include mixin.mq-max(sm) {
+    .app-company-benefits__grid {
+        grid-template-columns: 1fr;
+    }
     .app-company-benefits {
         padding-bottom: variables.toRem(72px);
     }
