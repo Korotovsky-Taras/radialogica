@@ -41,6 +41,8 @@ input:-webkit-autofill:active {
 
     .wpcf7-form-control-wrap {
         position: relative;
+        display: flex;
+        flex-direction: column;
 
         &:focus-within .wpcf7-not-valid-tip {
             display: none
@@ -71,6 +73,13 @@ input:-webkit-autofill:active {
 
     .wpcf7-response-output  {
         order: -1;
+    }
+    .wpcf7-spinner {
+        display: none;
+    }
+
+    input[type="submit"] {
+        width: auto;
     }
 }
 

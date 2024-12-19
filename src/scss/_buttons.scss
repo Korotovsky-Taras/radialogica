@@ -40,6 +40,7 @@
     white-space: nowrap;
     font-family: 'GCF-demi-bold', sans-serif;
     padding-top: calc(var(--btn-size) * 0.09);
+    box-shadow: inset var(--btn-line-width) 0 0 var(--btn-hover-background);
     position: relative;
     z-index: 1;
 
