@@ -34,3 +34,52 @@ input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
     -webkit-box-shadow: 0 0 0 30px var(--color-g5) inset !important;
 }
+
+.wpcf7 form {
+    display: flex;
+    flex-direction: column;
+
+    .wpcf7-form-control-wrap {
+        position: relative;
+
+        &:focus-within .wpcf7-not-valid-tip {
+            display: none
+        }
+    }
+
+    .wpcf7-not-valid-tip {
+        left: 0;
+        line-height: 1;
+        top: 0;
+        pointer-events: none;
+        position: absolute;
+        background-color: var(--color-g5);
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        outline: none;
+        padding: calc(1rem* var(--ratio)) calc(1.25rem* var(--ratio));
+        border: none;
+        max-width: 100%;
+        width: 100%;
+        font-family: Roboto, sans-serif;
+        font-size: calc(1.375rem* var(--ratio));
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        color: var(--color-orange-v1);
+    }
+
+    .wpcf7-response-output  {
+        order: -1;
+    }
+}
+
+.wpcf7 form.invalid  {
+    .wpcf7-response-output  {
+        background: var(--color-orange-v1);
+        border: none;
+        margin: 0;
+        padding: variables.toRem(20px);
+        text-align: center;
+    }
+}

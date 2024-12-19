@@ -100,3 +100,10 @@
         }
     }
 }
+
+#wpadminbar ~ .app-wrapper {
+    .app-header,
+    .app-sidebar {
+        top: var(--wp-admin--admin-bar--height)
+    }
+}

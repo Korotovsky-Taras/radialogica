@@ -4,6 +4,7 @@
 .app-contact-map {
     #map {
         height: variables.toRem(640px);
+        z-index: 1;
 
         @include mixin.mq-max(sm) {
             height: 50vh;
